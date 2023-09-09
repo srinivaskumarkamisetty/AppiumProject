@@ -1,0 +1,16 @@
+package apptesting.appium;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.google.common.base.Predicate;
+
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String args[]) {
+        
+    }
+}

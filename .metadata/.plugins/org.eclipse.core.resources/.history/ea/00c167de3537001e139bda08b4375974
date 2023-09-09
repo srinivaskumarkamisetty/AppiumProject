@@ -1,0 +1,17 @@
+package apptesting.appium;
+
+public class mam {
+	public static void main (String args [])
+	{
+	Set<Double> doubleValues = new HashSet<Double>(); 
+	doubleValues.add(34.5);
+	doubleValues.add(22.0); 
+	doubleValues.add(l3.5); 
+	doubleValues.add(44.0);
+	doubleValues.add(50.3);
+	Predicate<Double> moreThan25Value = (value) -> (value > 25); System.out.println (doubleValues.stream ().filter (moreThan25Value )
+	.collect ((Collectors .toMsp(p->(Double)p,q->((Double)q)*5)))); moreThan25Value •(value) -> (value < 25);                 System .out.println (doubleValues .stream ().
+	collect ((Collectors.toMsp (p-> (Double)p,q->((Double)q)*5)))); System.out.println (doubleValues.stream ().filter (moreThan25Value ).count ());
+
+	}
+}

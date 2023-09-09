@@ -1,0 +1,31 @@
+package apptesting.appium;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.google.common.base.Predicate;
+
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String args[]) {
+        Set<Double> doubleValues = new HashSet<Double>();
+        doubleValues.add(34.5);
+        doubleValues.add(22.0);
+        doubleValues.add(13.5);
+        doubleValues.add(44.0);
+        doubleValues.add(50.3);
+
+        Predicate<Double> moreThan25Value = (value) -> (value > 25);
+        System.out.println(doubleValues.stream().filter(moreThan25Value)
+                .collect(Collectors.toMap(p -> (Double) p, q -> ((Double) q) * 5)));
+                
+        moreThan25Value = (value) -> (value < 25);
+        System.out.println(doubleValues.stream()
+                .collect(Collectors.toMap(p -> (Double) p, q -> ((Double) q) * 5)));
+        
+        System.out.println(doubleValues.stream().filter(moreThan25Value).count());
+    }
+}
